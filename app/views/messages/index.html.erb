@@ -1,0 +1,16 @@
+
+<h1><%= flash[:notice] %></h1>
+<h1><%= flash[:errors]%>
+<h1>Post a Message</h1>
+ <form action="/messages/"method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <textarea rows="20" cols="75" name="post" id = "message_post"></textarea>
+    <input type='submit' value='Post a Message'>
+</form>
+<p><%= flash[:message] %><p>
+<h2> Comments </h2>
+
+<form action="/logout">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <input type='submit' value='Log Out'>
+</form>
